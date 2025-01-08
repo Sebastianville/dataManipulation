@@ -97,7 +97,29 @@ const dontDoThis = ((n1 + n2 + n3 + n4) == 50) &&
 
 
 
-//PArt 2
-  const distance = 1500
+//Part 2
+const distance = 1500
+
+const mph55 = 1500 / 30 //50
+const mph60 = 1500 / 28 //54
+const mph75 = 1500 / 23 //65
+
+let answer1 = `If you go 55 miles per hour, you will need ${mph55} gallons. \n If you go 60 miles per hour, you will need ${mph60} gallons.\n If you go 75 miles per hour, you will need ${mph75} gallons.`
 
 
+const budget55 = mph55 * 3 //150
+const budget60 = mph60 * 3 //162
+const budget75 = mph75 * 3 //195
+
+const isUnderBudget55 = 175 > budget55
+const isUnderBudget60 = 175 > budget60
+const isUnderBudget75 = 175 > budget75
+
+const time55 = distance / 55 //27.27
+const time60 = distance / 60 //25 
+const time75 = distance / 75 //20 
+
+let timeDifference = time60 - time55
+let moneyDifference = budget60 - budget55
+
+let answer2 = `It all depends on how you view time versus money. Going 75 mph will cost you ${budget75} dollars which is over the budget. However, going 60 mph will cost you ${budget60} dollars. It is under the budget. Going 60 mph will also save you ${timeDifference} hours instead of 55 mph. It will cost you ${moneyDifference} dollars more than going at 55 mph. I will go with 60 mph because those ${timeDifference} hours has more value than the  ${moneyDifference} dollars difference. `
